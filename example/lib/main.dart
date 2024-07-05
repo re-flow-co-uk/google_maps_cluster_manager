@@ -111,7 +111,7 @@ class MapSampleState extends State<MapSample> {
     );
   }
 
-  Future<Marker> Function(Cluster<Place>) get _markerBuilder =>
+  Future<Marker> Function(ClusterManagerCluster<Place>) get _markerBuilder =>
       (cluster) async {
         return Marker(
           markerId: MarkerId(cluster.getId()),
