@@ -29,7 +29,7 @@ class MapSample extends StatefulWidget {
 }
 
 class MapSampleState extends State<MapSample> {
-  late ClusterManager _manager;
+  late ClusterManagerCM _manager;
 
   Completer<GoogleMapController> _controller = Completer();
 
@@ -72,8 +72,8 @@ class MapSampleState extends State<MapSample> {
     super.initState();
   }
 
-  ClusterManager _initClusterManager() {
-    return ClusterManager<Place>(items, _updateMarkers,
+  ClusterManagerCM _initClusterManager() {
+    return ClusterManagerCM<Place>(items, _updateMarkers,
         markerBuilder: _markerBuilder);
   }
 
